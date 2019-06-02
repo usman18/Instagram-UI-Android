@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android" >
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        
+        <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:titleTextColor="#000000"
+                app:title="𝕴𝖓𝖘𝖙𝖆𝖌𝖗𝖆𝖒"
+                app:elevation="8dp"
+                />
         
         
+        <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="56dp"
+                android:layout_marginBottom="56dp"
+                />
+        
+        <android.support.design.bottomappbar.BottomAppBar
+                android:id="@+id/bottomAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:backgroundTint="@color/colorPrimary"
+                android:layout_gravity="bottom"
+                app:elevation="8dp"
+                app:fabAlignmentMode="center"
+                app:fabCradleRoundedCornerRadius="32dp"
+                app:fabCradleMargin="10dp"
+                app:fabCradleVerticalOffset="18dp"
+                app:buttonGravity="bottom"
+                />
+        
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                >
+        
+                <android.support.design.widget.BottomNavigationView
+                        android:id="@+id/bottomNav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="#00FFFFFF"
+                        app:menu="@menu/bottom_menu"
+                        app:itemIconTint="#000000"
+                        />
+                
+        </FrameLayout>
+        
+        
+        <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/bottomAppBar"
+                android:src="@drawable/fab_gradient"
+                />
         
         
 </android.support.design.widget.CoordinatorLayout>
