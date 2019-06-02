@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
 	
 		bottomNavigationView = findViewById(R.id.bottomNav);
 		
-		loadFragment(new HomeFragment());
+		//Todo
+		loadFragment(new ProfileFragment());
 		
 		bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 			@Override
