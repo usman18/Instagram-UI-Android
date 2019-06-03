@@ -47,7 +47,7 @@
                         android:layout_gravity="bottom"
                         android:background="@color/transparent"
                         app:menu="@menu/bottom_menu"
-                        app:itemIconTint="#000000"
+                        app:itemIconTint="@color/bottom_nav_selector"
                         />
                 
         </FrameLayout>

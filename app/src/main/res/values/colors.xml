@@ -7,4 +7,6 @@
         <color name="grey">#8b898a</color>
         <color name="pink">#d23381</color>
         <color name="transparent">#00FFFFFF</color>
+        <color name="selected_icon">#FE0000</color>
+        
 </resources>
