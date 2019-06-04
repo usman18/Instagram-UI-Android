@@ -19,11 +19,9 @@ import com.uk.instagramui.R;
 
 public class MainActivity extends AppCompatActivity {
 	
-	private BottomNavigationView bottomNavigationView;
-	
-	public static final String url = "https://instagram.fnag1-1.fna.fbcdn.net/vp/92a15d2c91d06d45f9a5b72ffd4cf3bd/5D84C9FD/t51.2885-19/s150x150/54731743_2011997322443409_3029283709959274496_n.jpg?_nc_ht=instagram.fnag1-1.fna.fbcdn.net";
-	
-	public static final String storyImages[] = {url,
+	//Random image urls below
+	public static final String profilePicUrl = "https://instagram.fnag1-1.fna.fbcdn.net/vp/92a15d2c91d06d45f9a5b72ffd4cf3bd/5D84C9FD/t51.2885-19/s150x150/54731743_2011997322443409_3029283709959274496_n.jpg?_nc_ht=instagram.fnag1-1.fna.fbcdn.net";
+	public static final String images[] = {profilePicUrl,
 		"https://blog.rackspace.com/wp-content/uploads/2018/09/pumping-iron-arnold-schwarzenegger-1-1108x0-c-default.jpg",
 		"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSijnCjlpixxnEcvYeKm-1pg6s2ohuD2VMcMoIzTZInCSZ57SJN",
 		"https://pbs.twimg.com/profile_images/798351849984294912/okhePpJW.jpg",
@@ -35,12 +33,18 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		initialize();
+	}
 	
+	
+	private void initialize() {
 		Toolbar toolbar = findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
-		bottomNavigationView = findViewById(R.id.bottomNav);
 		
-		loadFragment(new HomeFragment());
+		BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
+		
+		loadFragment(new HomeFragment());               //Default is home fragment
 		
 		bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 			@Override

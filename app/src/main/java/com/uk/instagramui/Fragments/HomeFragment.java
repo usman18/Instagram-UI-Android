@@ -34,11 +34,13 @@ public class HomeFragment extends Fragment {
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 		
+		
 		posts = new ArrayList<>();
 		rvPosts = view.findViewById(R.id.rvPosts);
 		
-		posts.add(new TimelinePost(MainActivity.storyImages[0], "schwarzenegger", MainActivity.storyImages[1],112, "How is that UI boy?", "10 min ago"));
-		posts.add(new TimelinePost(MainActivity.storyImages[3], "Conor McGregor", MainActivity.storyImages[3],200, "World Champion!", "2 hr ago"));
+		//Populating posts
+		posts.add(new TimelinePost(MainActivity.images[0], "schwarzenegger", MainActivity.images[1],112, "How is that UI boy?", "10 min ago"));
+		posts.add(new TimelinePost(MainActivity.images[3], "Conor McGregor", MainActivity.images[3],200, "World Champion!", "2 hr ago"));
 		
 		rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
 		

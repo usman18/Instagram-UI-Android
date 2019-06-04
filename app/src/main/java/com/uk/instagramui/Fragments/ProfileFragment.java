@@ -22,13 +22,10 @@ import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static com.uk.instagramui.Activities.MainActivity.storyImages;
-import static com.uk.instagramui.Activities.MainActivity.url;
+import static com.uk.instagramui.Activities.MainActivity.images;
+import static com.uk.instagramui.Activities.MainActivity.profilePicUrl;
 
 public class ProfileFragment extends Fragment {
-	
-	//Random image url for demonstration
-	
 	
 	private CircleImageView profilePic;
 	
@@ -61,18 +58,9 @@ public class ProfileFragment extends Fragment {
 		posts = new ArrayList<>();
 		
 		
-		if (!isDetached() && getContext() != null) {
-			Glide.with(getContext())
-				.load(url)
-				.into(profilePic);
-		}
+		loadProfilePic();
 		
-		stories.add(new Story(url, true));
-		stories.add(new Story(storyImages[1], true));
-		stories.add(new Story(storyImages[2], true));
-		stories.add(new Story(storyImages[3], false));
-		stories.add(new Story(storyImages[4], false));
-		
+		populateStories();
 		storyAdapter = new StoryAdapter(getContext(), stories);
 		
 		LinearLayoutManager storiesLayoutManager = new LinearLayoutManager(getContext());
@@ -81,14 +69,49 @@ public class ProfileFragment extends Fragment {
 		
 		rvStories.setAdapter(storyAdapter);
 		
-		for (int i = 0; i < 12; i++) {                  //Populating a few images
-			String storyImage = storyImages[i%5];
-			posts.add(new Post(storyImage));
-		}
-		
+		populatePosts();
 		postAdapter = new PostAdapter(getContext(), posts);
 		rvPosts.setLayoutManager(new GridLayoutManager(getContext(), 3));
 		rvPosts.setAdapter(postAdapter);
 		rvPosts.setNestedScrollingEnabled(false);
+	
 	}
+	
+	
+	
+	private void loadProfilePic() {
+		
+		if (!isDetached() && getContext() != null) {
+			Glide.with(getContext())
+				.load(profilePicUrl)
+				.into(profilePic);
+		}
+		
+	}
+	
+	
+	
+	private void populateStories() {
+		//Population logic goes here
+		
+		stories.add(new Story(profilePicUrl, true));
+		stories.add(new Story(images[1], true));
+		stories.add(new Story(images[2], true));
+		stories.add(new Story(images[3], false));
+		stories.add(new Story(images[4], false));
+		
+	}
+	
+	
+	
+	private void populatePosts() {
+		//Population logic goes here
+		
+		for (int i = 0; i < 12; i++) {                  //Populating a few images
+			String storyImage = images[i%5];
+			posts.add(new Post(storyImage));
+		}
+	}
+	
+	
 }
