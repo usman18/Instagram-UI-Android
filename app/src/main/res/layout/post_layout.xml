@@ -9,8 +9,8 @@
         <ImageView
                 android:id="@+id/imgPost"
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:scaleType="centerCrop"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
                 />
         
 </android.support.v7.widget.CardView>

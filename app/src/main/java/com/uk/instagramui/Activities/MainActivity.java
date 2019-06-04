@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 		
 		BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
 		
-		loadFragment(new HomeFragment());               //Default is home fragment
+		loadFragment(new ProfileFragment());               //Default is home fragment
 		
 		bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 			@Override

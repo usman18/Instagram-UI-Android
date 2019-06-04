@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,7 +72,8 @@ public class ProfileFragment extends Fragment {
 		
 		populatePosts();
 		postAdapter = new PostAdapter(getContext(), posts);
-		rvPosts.setLayoutManager(new GridLayoutManager(getContext(), 3));
+		StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
+		rvPosts.setLayoutManager(staggeredGridLayoutManager);
 		rvPosts.setAdapter(postAdapter);
 		rvPosts.setNestedScrollingEnabled(false);
 	
