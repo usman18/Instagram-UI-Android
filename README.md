@@ -8,9 +8,11 @@ Go ahead and play around with the UI!
 
 ## ScreenShots
 
-<img height=600 width=300 src="https://github.com/usman18/Instagram-UI-Android/blob/master/Screenshots/InstaUI3.JPG" hspace=60
+<img height=550 width=275 src="https://github.com/usman18/Instagram-UI-Android/blob/master/Screenshots/InstaUI3.JPG"
 />
-<img height=600 width=320 src="https://github.com/usman18/Instagram-UI-Android/blob/master/Screenshots/InstaUI4.JPG"/> 
+<img height=550 width=275 src="https://github.com/usman18/Instagram-UI-Android/blob/master/Screenshots/InstaUI4.JPG"
+hspace = 30
+/> 
 
 
 ## Contributions
