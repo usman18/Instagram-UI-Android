@@ -8,15 +8,14 @@ Go ahead and play around with the UI!
 
 ## ScreenShots
 
-<img height=550 width=275 src="https://github.com/usman18/Instagram-UI-Android/blob/master/Screenshots/InstaUI3.JPG"
+<img height=550 width=275 src="https://github.com/usman18/Instagram-UI-Android/blob/master/Screenshots/InstaUI3.JPG" hspace=120
 />
 <img height=550 width=275 src="https://github.com/usman18/Instagram-UI-Android/blob/master/Screenshots/InstaUI4.JPG"
-hspace = 30
 /> 
 
 
 ## Contributions
-Contributions are always welcome. Please fork this repository and contribute using pull requests.
+Contributions are always welcome. Please fork this repository and contribute using pull requests. The pull requests will be thoroughly assessed and if found significant will be accepted.
 
 ## Lets become friends
 - [Twitter](https://twitter.com/khan_usman_18)
